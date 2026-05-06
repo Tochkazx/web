@@ -1,23 +1,11 @@
-"""
-🎁 КВЕСТ-БОТ ДЛЯ ПОДАРКА
-Опросник, который определяет какую подписку получит девушка: 3, 6 или 12 месяцев.
-
-Установка:
-    pip install pyTelegramBotAPI
-
-Запуск:
-    1. Вставь свой BOT_TOKEN (получить у @BotFather)
-    2. python quest_bot.py
-"""
-
 import telebot
 from telebot import types
 import json
+import os
 
-# ===================== НАСТРОЙКИ =====================
 
-BOT_TOKEN = "ВСТАВЬ_СВОЙ_TOKEN_ЗДЕСЬ"  # Получить у @BotFather в Telegram
-
+BOT_TOKEN = "8224785456:AAErHSW67Mp3kJRMod0ENBVIgouS4b3Txjc"  # Получить у @BotFather в Telegram
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
 # Что написать в финале в зависимости от результата
 PRIZES = {
     "3": {
